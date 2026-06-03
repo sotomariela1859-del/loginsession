@@ -1,0 +1,33 @@
+{% block title %}{{data.titulo}} {% endblock %}
+
+
+{% block bodym %}
+   <h1>Aplicaciones wed marinela {{data.Bienvenida}}</h1>
+
+   <ul>
+    <li>lapiz</li>
+    <li>pluma</li>
+    <li>libreta</li>
+   </ul>
+
+<h2>{{data.bienvenida}}</h2>
+
+{% if data.edad > 18 %}
+
+    <p>como tu edad es de {{data.edad}} entonces eres mayor de edad </p>
+
+{% else %}
+<h2>No eres mayor de edad</h2>
+{% endif %}
+ {% if data.numerocursos > 0 %}
+<ul>
+    {% for c in data.cuesos %}
+    <li>{{c}}</li>
+    {% endfor %}
+</ul>
+
+{% else %}
+<h2>No hay cursos</h2>
+{% endif %}
+
+{% endblock %}
