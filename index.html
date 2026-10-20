@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lo siento y me muevo</title>
+    <style>
+        :root {
+            --color-principal: #8B3A62;
+            --color-secundario: #D8BFD8;
+            --color-fondo: #FFF5F7;
+            --color-texto: #333333;
+            --color-tarjeta: #FFFFFF;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--color-fondo);
+            color: var(--color-texto);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: var(--color-principal);
+            color: white;
+            text-align: center;
+            padding: 2.5rem 1rem;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.2rem;
+        }
+
+        header p {
+            margin-top: 0.5rem;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        section {
+            background-color: var(--color-tarjeta);
+            border-radius: 8px;
+            padding: 1.5rem 2rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        h2 {
+            color: var(--color-principal);
+            border-bottom: 2px solid var(--color-secundario);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        .grid-emociones {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .tarjeta-emocion {
+            background-color: #FAFAFA;
+            border: 1px solid #E0E0E0;
+            border-radius: 6px;
+            padding: 1rem;
+        }
+
+        .tarjeta-emocion h3 {
+            margin-top: 0;
+            color: var(--color-principal);
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        label {
+            font-weight: 600;
+            color: var(--color-principal);
+        }
+
+        input[type="text"], select, textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #CCC;
+            border-radius: 4px;
+            font-size: 1rem;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            resize: vertical;
+            height: 100px;
+        }
+
+        button {
+            background-color: var(--color-principal);
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            font-size: 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            align-self: flex-start;
+        }
+
+        button:hover {
+            background-color: #6d2d4d;
+        }
+
+        #resultado-reflexion {
+            margin-top: 1.5rem;
+            padding: 1rem;
+            background-color: #E8F4F8;
+            border-left: 4px solid #2980B9;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Lo siento y me muevo</h1>
+        <p>El ABC de las Emociones - Salud Mental para las y los Jóvenes</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>¿Qué son las emociones?</h2>
+            <p>Las emociones son respuestas psicofisiológicas pasajeras que surgen de manera automática ante estímulos externos o internos, ayudándonos a adaptarnos a nuestro entorno. Las experimentamos porque forman parte de nuestra naturaleza como seres vivos y cumplen una función vital de supervivencia y comunicación. Estas reacciones influyen directamente en nuestra manera de actuar, tomar decisiones y relacionarnos con otras personas en el día a día.</p>
+        </section>
+
+        <section>
+            <h2>Las emociones y el cuerpo</h2>
+            <p>Podemos expresar lo que sentimos mediante los gestos, las posturas, los movimientos y la expresión del rostro sin necesidad de pronunciar una sola palabra. Por ejemplo, una persona puede manifestar alegría con una sonrisa abierta y una postura relajada, o tristeza encorvando los hombros y mirando hacia el suelo. De igual manera, el enojo suele reflejarse con el ceño fruncido y los puños apretados, el miedo con el cuerpo tenso y los ojos muy abiertos, y la sorpresa con una postura abierta y la boca semiabierta.</p>
+        </section>
+
+        <section>
+            <h2>Cinco emociones que podemos experimentar</h2>
+            <div class="grid-emociones">
+                <div class="tarjeta-emocion">
+                    <h3> Alegría</h3>
+                    <p>Es una sensación de bienestar y felicidad plena. Suele aparecer al alcanzar metas o compartir con seres queridos, y se expresa corporalmente con una sonrisa amplia y energía dinámica.</p>
+                </div>
+                <div class="tarjeta-emocion">
+                    <h3>Tristeza</h3>
+                    <p>Respuesta ante una pérdida o decepción profunda. Aparece cuando enfrentamos momentos difíciles y se expresa con llanto, mirada baja, hombros caídos y movimientos lentos.</p>
+                </div>
+                <div class="tarjeta-emocion">
+                    <h3>Enojo</h3>
+                    <p>Reacción ante una injusticia o bloqueo de objetivos. Surge para defendernos y se expresa con tensión muscular, respiración acelerada, ceño fruncido y tono de voz firme.</p>
+                </div>
+                <div class="tarjeta-emocion">
+                    <h3>Miedo</h3>
+                    <p>Alerta ante un peligro real o imaginario. Aparece para protegernos de amenazas y se expresa temblando, contrayendo el cuerpo, huyendo o quedándose completamente paralizados.</p>
+                </div>
+                <div class="tarjeta-emocion">
+                    <h3>Sorpresa</h3>
+                    <p>Reacción breve ante algo imprevisto o novedoso. Aparece de forma repentina y se expresa abriendo bien los ojos, elevando las cejas y abriendo la boca de manera involuntaria.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>¿Todas las personas expresan sus emociones igual?</h2>
+            <p>Dos personas pueden reaccionar de manera completamente diferente ante una misma situación debido a sus experiencias de vida, su contexto cultural, su personalidad y sus herramientas de regulación emocional. Por esta razón, es fundamental evitar juzgar a los demás por sus gestos, movimientos o expresiones particulares. Cada individuo procesa y comunica lo que siente a su propia manera, y comprender esto fomenta la empatía y la convivencia sana.</p>
+        </section>
+
+        <section>
+            <h2>La importancia del respeto</h2>
+            <p>Respetar las emociones de otras personas implica validar lo que sienten sin invalidarlas, minimizar sus vivencias ni recurrir a burlas o críticas. Evitar comentarios despectivos y ofrecer un espacio seguro de escucha cuando alguien se siente triste, preocupado, enojado o asustado fortalece los lazos de confianza. El apoyo mutuo y la validación afectiva son pilares fundamentales para cuidar la salud mental en nuestra comunidad juvenil[span_2](start_span)[span_2](end_span).</p>
+        </section>
+4r<cwsza fb ab x<jym7ua< cqa<483
+        <section>
+            <h2>Formulario de Reflexión</h2>
+            <form id="formReflexion">
+                <div>
+                    <label for="nombre">Nombre del estudiante:</label>
+                    <input type="text" id="nombre" name="nombre" required placeholder="Escribe tu nombre completo">
+                </div>
+
+                <div>
+                    <label for="emocion">Selecciona una emoción:</label>
+                    <select id="emocion" name="emocion" required>
+                        <option value="">-- Elige una opción --</option>
+                        <option value="Alegría">Alegría</option>
+                        <option value="Tristeza">Tristeza</option>
+                        <option value="Enojo">Enojo</option>
+                        <option value="Miedo">Miedo</option>
+                        <option value="Sorpresa">Sorpresa</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="expresionCuerpo">¿Cómo expresarías esa emoción mediante tu cuerpo?</label>
+                    <textarea id="expresionCuerpo" name="expresionCuerpo" required placeholder="Describe tus gestos, postura o movimientos..."></textarea>
+                </div>
+
+                <div>
+                    <label for="respetoEmociones">¿Por qué debemos respetar la forma en que otras personas expresan sus emociones?</label>
+                    <textarea id="respetoEmociones" name="respetoEmociones" required placeholder="Escribe tu reflexión..."></textarea>
+                </div>
+
+                <button type="submit">Enviar respuestas</button>
+            </form>
+
+            <div id="resultado-reflexion">
+                <h3>¡Respuestas guardadas con éxito!</h3>
+                <p id="txt-salida"></p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.getElementById('formReflexion').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const nombre = document.getElementById('nombre').value;
+            const emocion = document.getElementById('emocion').value;
+            const expresionCuerpo = document.getElementById('expresionCuerpo').value;
+            const respetoEmociones = document.getElementById('respetoEmociones').value;
+
+            console.log("--- DATOS DEL FORMULARIO DE EMOCIONES ---");
+            console.log("Nombre del estudiante:", nombre);
+            console.log("Emoción seleccionada:", emocion);
+            console.log("Expresión corporal:", expresionCuerpo);
+            console.log("Reflexión sobre el respeto:", respetoEmociones);
+
+            const contenedorResultado = document.getElementById('resultado-reflexion');
+            const textoSalida = document.getElementById('txt-salida');
+            
+            textoSalida.innerHTML = `Gracias, <strong>${nombre}</strong>. Tu registro sobre la emoción <strong>${emocion}</strong> ha sido procesado correctamente y verificado en la consola de JavaScript.`;
+            contenedorResultado.style.display = 'block';
+            
+        });
+    </script>
+</body>
+</html>
