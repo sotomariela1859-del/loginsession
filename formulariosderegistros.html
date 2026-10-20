@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/estiloformulario.css">
+</head>
+<body>
+    <h1>Formulario de registro</h1>
+
+<form action="#" method="get">
+<p>
+<label for="nombre">Nombre:</label>
+<input type="text" name="nombre" id="nombre" maxlength="50" required/>
+</p>
+
+<p>
+<label for="apellidos">Apellidos:</label>
+<input type="text" name="apellidos" id="apellidos" maxlength="50" />
+</p>
+
+<p>
+Sexo: <input type="radio" name="sexo" id="sexo-h" value="h" />
+<label for="sexo-h">hombre</label>
+<input type="radio" name="sexo" id="sexo-m" value="m" />
+<label for="sexo-m">mujer</label>
+</p>
+
+<p>
+<label for="correo">Correo:</label>
+<input type="text" name="correo" id="correo" maxlength="100" />
+</p>
+
+<p>
+<label for="estado">Población:</label>
+<select name="estado" id="estado">
+    <option value="">Selecciona un estado</option>
+    <option>Aguascalientes</option>
+    <option>Baja California</option>
+    <option>Baja California Sur</option>
+    <option>Campeche</option>
+    <option>Chiapas</option>
+    <option>Chihuahua</option>
+    <option>Ciudad de México</option>
+    <option>Coahuila</option>
+    <option>Colima</option>
+    <option>Durango</option>
+    <option>Estado de México</option>
+    <option>Guanajuato</option>
+    <option>Guerrero</option>
+    <option>Hidalgo</option>
+    <option>Jalisco</option>
+    <option>Michoacán</option>
+    <option>Morelos</option>
+    <option>Nayarit</option>
+    <option>Nuevo León</option>
+    <option>Oaxaca</option>
+    <option>Puebla</option>
+    <option>Querétaro</option>
+    <option>Quintana Roo</option>
+    <option>San Luis Potosí</option>
+    <option>Sinaloa</option>
+    <option>Sonora</option>
+    <option>Tabasco</option>
+    <option>Tamaulipas</option>
+    <option>Tlaxcala</option>
+    <option>Veracruz</option>
+    <option>Yucatán</option>
+    <option>Zacatecas</option>
+</select>
+
+<p><label for="descripcion">Descripción:</label>
+<textarea name="descripcion" id="descripcion" rows="6" cols="60"></textarea>
+</p>
+
+<p>
+<input type="checkbox" name="info" id="info" checked="checked" />
+<label for="info">Deseo recibir información sobre novedades y ofertas</label>
+</p>
+
+<p>
+<input type="checkbox" name="condiciones" id="condiciones" />
+<label for="condiciones"> Declaro haber leído y aceptar las condiciones generales del programa y
+la normativa sobre protección de datos</label>
+</p>
+
+<p>
+<input type="submit" value="Enviar" />
+</p>
+</form>
+</body>
+</html>
